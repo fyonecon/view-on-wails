@@ -3,4 +3,5 @@
 1）运行和打包：wails.json 里面删除了 "frontend:build": "npm run build" 字段，因为本项目代码是纯资源文件，并非vue。如果更改了 src/main.js 代码，请在 wails.json 里面手动增加 "frontend:build": "npm run build" 字段，然后运行 wails dev 来重新初始化，然后再次删除"frontend:build": "npm run build" 字段，再运行 wails build 命令。
 2）frontend/index.html 不要改；frontend/dist/index.html一般情况下是自动生成的，不需要更改。
 3）网站源码在 frontend/dist/view 里面。
+4）外链资源是打不开的（包括加载js、css等），打开外链请使用默认浏览器打开。
 
