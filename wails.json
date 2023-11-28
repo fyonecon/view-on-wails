@@ -1,0 +1,12 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "PureHome",
+  "outputfilename": "PureHome",
+  "frontend:install": "npm install",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "fyonecon",
+    "email": "fyonecon@gmail.com"
+  }
+}

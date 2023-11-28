@@ -1,0 +1,11 @@
+/*
+    局部模块css
+*/
+@charset "UTF-8";
+
+.img-404{
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
