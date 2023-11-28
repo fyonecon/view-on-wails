@@ -1,8 +1,12 @@
 
 ## View Web框架在GoWails框架中的应用
+https://github.com/fyonecon/view-on-wails
 
-## Docs
+## Wails Docs
 https://wails.io/zh-Hans/docs/gettingstarted/installation
+
+## View
+https://github.com/fyonecon/view
 
 ## Building
 
