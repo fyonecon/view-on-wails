@@ -21,7 +21,7 @@ func main() {
 	err := wails.Run(&options.App{
 		Title:             "PureHome",
 		Width:             1000,
-		Height:            650,
+		Height:            720,
 		MinWidth:          360,
 		MinHeight:         480,
 		HideWindowOnClose: true,
