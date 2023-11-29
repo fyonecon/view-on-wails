@@ -20,9 +20,9 @@ func main() {
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:             "PureHome",
-		Width:             980,
-		Height:            640,
-		MinWidth:          320,
+		Width:             1000,
+		Height:            650,
+		MinWidth:          360,
 		MinHeight:         480,
 		HideWindowOnClose: true,
 		Frameless:         false,
