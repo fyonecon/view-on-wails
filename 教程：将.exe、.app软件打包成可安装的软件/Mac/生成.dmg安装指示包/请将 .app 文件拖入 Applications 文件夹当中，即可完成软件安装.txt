@@ -1,0 +1,1 @@
+请将 .app 文件拖入 Applications 文件夹当中，即可完成安装。
