@@ -19,8 +19,8 @@ func main() {
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:             "PureHome",
-		Width:             1000,
+		Title:             "",
+		Width:             1200,
 		Height:            720,
 		MinWidth:          360,
 		MinHeight:         480,
@@ -39,11 +39,11 @@ func main() {
 		},
 		Mac: &mac.Options{
 			TitleBar: &mac.TitleBar{
-				TitlebarAppearsTransparent: true,
+				TitlebarAppearsTransparent: false,
 				HideTitle:                  false, //
 				HideTitleBar:               false, // 三个点
 				FullSizeContent:            false,
-				UseToolbar:                 true,
+				UseToolbar:                 false,
 				HideToolbarSeparator:       true,
 			},
 			Appearance:           mac.NSAppearanceNameDarkAqua,
