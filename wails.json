@@ -2,9 +2,6 @@
   "$schema": "https://wails.io/schemas/config.v2.json",
   "name": "PureHome",
   "outputfilename": "PureHome",
-  "frontend:install": "npm install",
-  "frontend:dev:watcher": "npm run dev",
-  "frontend:dev:serverUrl": "auto",
   "author": {
     "name": "fyonecon",
     "email": "fyonecon@gmail.com"
@@ -14,7 +11,7 @@
   "info": {
     "companyName": "fyonecon",
     "productName": "PureHome",
-    "productVersion": "2.0.0",
+    "productVersion": "2.1.0",
     "copyright": "Copyright fyonecon",
     "comments": "Built using Wails"
   }

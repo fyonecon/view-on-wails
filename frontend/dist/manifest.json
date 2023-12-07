@@ -1,0 +1,15 @@
+{
+  "name": "简单主页",
+  "short_name": "简单主页",
+  "start_url": "./?utm_source=pwa",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "简单主页，PWA应用",
+  "icons": [
+    {
+      "src": "//cdn.ggvs.net/view/static/img/launcher.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

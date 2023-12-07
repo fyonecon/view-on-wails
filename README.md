@@ -2,6 +2,8 @@
 ## View Web框架在Go Wails框架中的应用，介绍
 将 Web PWA 应用打包，运行于 macOS11+、Win10+ 等电脑系统平台，性能优于Chromium打包的应用，并且安全性高。
 
+项目已经删除了npm命令，自定义的web源码在dist文件夹下。
+
 ## 运行环境
 #### Mac平台（需macOS11+<建议>）
 #### Win平台（需Win7+，依赖webview2环境<下载安装webview2 https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download 。win10+ 22H2以后系统自带。 >）

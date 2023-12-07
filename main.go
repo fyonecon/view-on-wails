@@ -50,7 +50,7 @@ func main() {
 			WebviewIsTransparent: true,
 			WindowIsTranslucent:  false,
 			About: &mac.AboutInfo{
-				Title:   "简单主页",
+				Title:   "简单主页（PureHome）",
 				Message: "© 2023",
 				//Icon:    icon,
 			},
