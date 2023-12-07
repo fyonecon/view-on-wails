@@ -4,6 +4,8 @@
 
 项目已经删除了npm命令，自定义的web源码在dist文件夹下。
 
+外挂（调用）wailsjs请直接使用window.runtime.xxx来调用。
+
 ## 运行环境
 #### Mac平台（需macOS11+<建议>）
 #### Win平台（需Win7+，依赖webview2环境<下载安装webview2 https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download 。win10+ 22H2以后系统自带。 >）
