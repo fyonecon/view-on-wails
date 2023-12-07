@@ -8,5 +8,14 @@
   "author": {
     "name": "fyonecon",
     "email": "fyonecon@gmail.com"
+  },
+  "version": "2",
+  "debounceMS": 34115,
+  "info": {
+    "companyName": "fyonecon",
+    "productName": "PureHome",
+    "productVersion": "2.0.0",
+    "copyright": "Copyright fyonecon",
+    "comments": "Built using Wails"
   }
 }
