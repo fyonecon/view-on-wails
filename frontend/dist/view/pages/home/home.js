@@ -1381,6 +1381,7 @@ function start_page(info) {
     //
     if (view.is_wails()){
         $(".qr-div-div").addClass("hide");
+        $(".window_close-span").removeClass("hide");
     }
 
     init_dom();

@@ -1,36 +1,40 @@
 package main
 
 import (
+	"changeme/bootstrap"
 	"embed"
-	"github.com/wailsapp/wails/v2/pkg/options/mac"
-	"github.com/wailsapp/wails/v2/pkg/options/windows"
-
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
+	"github.com/wailsapp/wails/v2/pkg/options/mac"
+	"github.com/wailsapp/wails/v2/pkg/options/windows"
 )
 
 //go:embed all:frontend/dist
 var assets embed.FS
 
 func main() {
+
+	// 编译前的初始化操作
+	bootstrap.AppInit()
+
 	// Create an instance of the app structure
 	app := NewApp()
 
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:             "",
-		Width:             1200,
+		Width:             1024,
 		Height:            720,
 		MinWidth:          360,
-		MinHeight:         480,
+		MinHeight:         420,
 		HideWindowOnClose: true,
 		Frameless:         false,
 		WindowStartState:  options.Normal,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
-		BackgroundColour: &options.RGBA{R: 51, G: 51, B: 51, A: 220}, // A最大255
+		BackgroundColour: &options.RGBA{R: 51, G: 51, B: 51, A: 229}, // A最大255，取90%
 		OnStartup:        app.startup,
 		CSSDragProperty:  "--wails-draggable",
 		CSSDragValue:     "drag",
