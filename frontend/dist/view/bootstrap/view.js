@@ -1134,7 +1134,7 @@ const view = {
         let that = this;
         if (that.is_wails()){
             if (that.is_url(url)){
-                window.runtime.BrowserOpenURL(url); // 注意，启动此函数需要完整的网址（如http、https开头的）
+                window.wailsJS.window_open(url); // 注意，启动此函数需要完整的网址（如http、https开头的）
             }else{
                 console.log("启动此函数需要完整的网址（如http、https开头的）：", url);
             }
