@@ -24,9 +24,9 @@ func main() {
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:             "",
-		Width:             1024,
+		Width:             1150,
 		Height:            720,
-		MinWidth:          360,
+		MinWidth:          320,
 		MinHeight:         420,
 		HideWindowOnClose: true,
 		Frameless:         false,
@@ -54,8 +54,8 @@ func main() {
 			WebviewIsTransparent: true,
 			WindowIsTranslucent:  false,
 			About: &mac.AboutInfo{
-				Title:   "简单主页（PureHome）",
-				Message: "© 2023",
+				Title:   "简单主页（PureHome）v2.3",
+				Message: "©fyonecon；Using Wails2.6.0、viewJS。",
 				//Icon:    icon,
 			},
 		},

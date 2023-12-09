@@ -5,7 +5,10 @@
         </a>
     </div>
 
-    <ul class="cmd-ul">
+    <div id="write-html"></div>
+    <div class="clear"></div>
+
+    <ul class="cmd-ul hide">
         <div class="cmd-group"># 安装PWA应用：</div>
         <li class="cmd-li">
             <div class="cmd-li-title">1）Win、Mac电脑端：Google Chrome、Microsoft Edge、Brave、Opera等</div>
@@ -36,7 +39,7 @@
         <div class="cmd-group"># 文件缓存策略说明：</div>
         <li class="cmd-li">
             <div class="cmd-li-title">缓存js文件</div>
-            <div class="cmd-li-explain">缓存周期为6个月，具体依靠是否更新了代码。</div>
+            <div class="cmd-li-explain">缓存周期为1个月，具体依靠是否更新了代码。</div>
         </li>
         <li class="cmd-li">
             <div class="cmd-li-title">不缓存css文件</div>
@@ -52,25 +55,25 @@
             <div class="cmd-li-title">kw@ 或 kw@fresh 或 kw@refresh </div>
             <div class="cmd-li-explain">刷新页面</div>
         </li>
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@help</div>
             <div class="cmd-li-explain">进入帮助页面</div>
         </li>
 
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@404</div>
             <div class="cmd-li-explain">打开404页面</div>
         </li>
 
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@bing</div>
             <div class="cmd-li-explain">获取必应搜索引擎</div>
         </li>
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@baidu</div>
             <div class="cmd-li-explain">获取百度搜索引擎</div>
         </li>
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@google</div>
             <div class="cmd-li-explain">获取Google搜索引擎</div>
         </li>
@@ -98,11 +101,11 @@
             <div class="cmd-li-explain">隐藏主页的隐藏滑动的标签</div>
         </li>
 
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@show_color</div>
             <div class="cmd-li-explain">打开主题切换按钮</div>
         </li>
-        <li class="cmd-li">
+        <li class="cmd-li hide">
             <div class="cmd-li-title">kw@hide_color</div>
             <div class="cmd-li-explain">关闭主题切换按钮</div>
         </li>

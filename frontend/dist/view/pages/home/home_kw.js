@@ -1,5 +1,5 @@
 // 输入kw@关键词时对应
-function home_kw(_word){
+function check_input_kw(_word){
     let word = decodeURIComponent(_word);
     view.log("对比字符串：", [_word, word]);
     let state = true;
@@ -30,7 +30,7 @@ function home_kw(_word){
     }
     else if (word === "kw@chatgpt" || word === "kw@chat" || word === "chat" || word === "poe"){
         url = "https://poe.com";
-        window.open(url, "_blank");
+        view.window_open(url, "_blank");
     }
     else if (word === "kw@bing"){
         url = "./?route=search&word="+_word;
@@ -90,6 +90,5 @@ function home_kw(_word){
     else { // 未匹配
         state = false;
     }
-
     return state;
 }
