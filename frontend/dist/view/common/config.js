@@ -13,8 +13,7 @@ const block_wechat = true; // 是否禁止在微信中打开，true & false
 const route_404       = "?route=404";   // 404
 const page_time       = "cache=" + index_func.TimeDate("Ymd");
 
-const api_url         = "./";  // api主地址
-const rich_html_url   = "http://view.ggvs.net/view/"; // 富文本主地址
+const api_url         = "";  // api主地址
 
 // 白名单host或refer域名
 const app_url = {

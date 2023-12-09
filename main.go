@@ -54,7 +54,7 @@ func main() {
 			WebviewIsTransparent: true,
 			WindowIsTranslucent:  false,
 			About: &mac.AboutInfo{
-				Title:   "简单主页（PureHome）v2.3",
+				Title:   "简单主页（PureHome）v2.3.1",
 				Message: "©fyonecon；Using Wails2.6.0、viewJS。",
 				//Icon:    icon,
 			},

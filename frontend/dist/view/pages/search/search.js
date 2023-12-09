@@ -206,8 +206,8 @@ function s_update_history(input_value){
         view.log("input_value不能为空");
     }
 
-    // 自动处理历史记录，规则：start_history - new_history > 31 day，即表示无法在”长时间连续使用“的情况下，以前的历史即为fake历。
-    let len_day = 30; // 默认存一个月
+    // 自动处理历史记录，规则：start_history - new_history > 60 day，即表示无法在”长时间连续使用“的情况下，以前的历史即为fake历。
+    let len_day = 2*30; // 默认存2个月
     let input_history_start_time_key = "input_history_start_time";
     let input_history_new_time_key = "input_history_new_time";
     let input_history_start_time = view.get_data(input_history_start_time_key)*1;
