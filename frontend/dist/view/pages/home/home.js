@@ -1121,15 +1121,15 @@ function battery_model(){
     if (window.innerWidth < 640){
         //
         view.log("当前节能模式：「移动端跳过」");
-        $(".switch-battery_state").removeClass("hide").html("🔋"+txt_translate.battery_on[lang_eq]);
+        $(".switch-battery_state").removeClass("hide").html("🔋 "+txt_translate.battery_on[lang_eq]);
     }else{
         if (view.get_switch_state("battery_state") === "Off"){
             view.log("当前节能模式：关闭");
-            $(".switch-battery_state").removeClass("hide").html("🪫"+txt_translate.battery_off[lang_eq]);
+            $(".switch-battery_state").removeClass("hide").html("🪫 "+txt_translate.battery_off[lang_eq]);
             view.write_js([cdn_page_file+"parts/bg_animate/bg_animate.js"+"?"+page_time]);
         }else {
             view.log("当前节能模式：打开");
-            $(".switch-battery_state").removeClass("hide").html("🔋"+txt_translate.battery_on[lang_eq]);
+            $(".switch-battery_state").removeClass("hide").html("🔋 "+txt_translate.battery_on[lang_eq]);
         }
     }
 }
