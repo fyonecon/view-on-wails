@@ -29,12 +29,27 @@ h3, h4, h5, p{
 
 .page-content{
     width: calc(100% - 0px);
-    padding: 10px 0;
+    padding: 0 0;
     overflow-x: hidden;
-    min-height: 400px;
     max-width: 3840px;
     margin-right: auto;
     margin-left: auto;
+}
+
+/*定义scroll样式*/
+.scroll-y-style{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.scroll-y-style::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(245,245,245,0.3);
+}
+.scroll-y-style::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    height: 44px;
+    background-color: rgba(245,245,245,0.6);
+    cursor: pointer;
 }
 
 /**/

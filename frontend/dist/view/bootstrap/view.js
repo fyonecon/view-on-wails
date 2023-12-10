@@ -356,7 +356,7 @@ const view = {
         // alert_txt层级形态显示
         let alert_confirm_index = that.get_cache("alert_confirm_index")*1;
         if (!alert_confirm_index){
-            alert_confirm_index = 9000000;
+            alert_confirm_index = 20230330;
         }else {
             alert_confirm_index = alert_confirm_index + 10;
         }
@@ -364,23 +364,28 @@ const view = {
 
         //that.log(["alert_txt", txt, timeout, clear, alert_txt_index]);
         let class_name = "alert_confirm_" + alert_confirm_index;
+        let class_yes = "alert_txt-btn-yes_" + alert_confirm_index;
+        let class_no = "alert_txt-btn-no_" + alert_confirm_index;
 
         let div = '<div class="'+class_name+' div-alert_confirm select-none" style="z-index:'+alert_confirm_index+';">' +
             '   <div class="div-alert_txt-title">'+title+'</div>' +
             '   <div class="div-alert_txt-msg">'+ msg +'</div>' +
-            '   <div class="div-alert_txt-btn"><span class="div-alert_txt-btn-no click float-left">No</span><span class="div-alert_txt-btn-yes click float-right">Yes</span><div class="clear"></div></div>' +
+            '   <div class="div-alert_txt-btn"><span class="'+class_no+' div-alert_txt-btn-no click float-left">No</span><span class="'+class_yes+' div-alert_txt-btn-yes click float-right">Yes</span><div class="clear"></div></div>' +
             '   <div class="clear"></div>' +
             '</div>';
         $("#depend").append(div);
+        that.show_mask("long");
         // 确认
-        $(document).on("click", ".div-alert_txt-btn-yes", function (){
+        $(document).on("click", "."+class_yes, function (){
             call_func(true, class_name);
             $("."+class_name).remove();
+            that.del_mask();
         });
         // 取消
-        $(document).on("click", ".div-alert_txt-btn-no", function (){
+        $(document).on("click", "."+class_no, function (){
             call_func(false, class_name);
             $("." + class_name).remove();
+            that.del_mask();
         });
 
     },
