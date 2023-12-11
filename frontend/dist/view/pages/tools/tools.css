@@ -1,21 +1,18 @@
 
 
-.back-div{
-    padding: 10px 10px;
-}
-
 .tools-content{
     width: 100%;
 }
 .run-tools-content{
-    padding: 10px 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .tools-left-content{
-    width: 200px;
+    width: calc(200px - 1px);
     font-size: 14px;
     color: white;
     background-color: rgba(205,205,205,0.1);
+    border-right: 1px solid rgba(245,245,245,0);
     height: calc(100% - 45px - 10px);
     padding-bottom: 10px;
     overflow-y: auto;
@@ -28,8 +25,7 @@
     width: calc(100% - 200px);
     font-size: 14px;
     color: white;
-    background-color: rgba(235,235,235,0.1);
-    height: calc(100% - 45px - 10px);
+    height: calc(100% - 45px);
     padding-bottom: 10px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -44,9 +40,11 @@
     padding: 0 10px;
     overflow: hidden;
     letter-spacing: 1px;
+    border-bottom: 1px solid rgba(245,245,245,0.1);
 }
 .tools-left-item-active{
-    background-color: rgba(245,245,245,0.3);
+    background-color: rgba(245,245,245,0.2);
+    border-bottom: 1px solid rgba(245,245,245,0.1);
 }
 
 .tools-right-content-null{
@@ -59,11 +57,14 @@
 .textarea-style{
     width: calc(100% - 20px);
     max-width: calc(100% - 20px);
-    min-height: 250px;
+    min-height: 220px;
     padding: 10px 10px;
     font-size: 14px;
     line-height: 20px;
     border-radius: 5px;
+    background-color: rgba(245,245,245,1);
+    color: black;
+    overflow-x: hidden;
 }
 .textarea-div{
     width: 100%;

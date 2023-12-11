@@ -61,6 +61,10 @@ function check_input_kw(_word){
         view.notice_txt("已隐藏整点报时切换按钮", 2000);
         $(".on-hour-div").removeClass("hide");
     }
+    else if (word === "kw@tools"){
+        view.notice_txt("已展示Tools按钮", 2000);
+        $(".tools-span").removeClass("hide");
+    }
     else if (view.string_include_string(word, "kw@url=") >= 0){
         view.notice_txt("打开网址", 2000);
         let dom_id = "content-bg";

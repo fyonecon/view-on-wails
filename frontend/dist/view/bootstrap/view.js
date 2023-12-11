@@ -29,8 +29,9 @@ const view = {
         let that = this;
         return that.get_url_param("", "route")?that.get_url_param("", "route"):"home";
     },
-    write_html: function (file_path, by_id, call_func, class_name) {  // 注射文件 | 写入htm
+    write_html: function (file_path, by_id, call_func, class_name) {  // 注射文件 | 写入html dom
         let that = this;
+        if (!class_name){class_name=by_id+view.time_date("YmdHi00");}
         $.ajax({ // 利用ajax的get请求获取文本内容
             url: file_path + "?" + page_time,
             async: true,
@@ -48,7 +49,7 @@ const view = {
                 //     console.error("不能写入id_Dom", by_id);
                 // }
 
-                $("#"+by_id).append(data);
+                $("#"+by_id).append("<div class='write_html-class_name "+class_name+"' data-by_id='"+by_id+"' >"+data+"</div>");
 
                 try {
                     call_func(true);
@@ -149,13 +150,55 @@ const view = {
         document.getElementById(by_id).innerHTML = html;
     },
     base64_encode: function (string) {
-        return btoa(string);
+        try {
+            return btoa(string);
+        }catch (e) {
+            return null;
+        }
     },
     base64_decode: function (string) {
-        return atob(string);
+        try {
+            return atob(string);
+        }catch (e) {
+            return null;
+        }
     },
     md5: function (string) {
         return hex_md5(string);
+    },
+    string_to_unicode: function (string){ // 字符串转unicode，任意字符串
+        let back = "";
+        for (let i=0; i<string.length; i++){
+            if (back){
+                back += ","+string.charCodeAt(i);
+            }else{
+                back = string.charCodeAt(i);
+            }
+
+        }
+        return back;
+    },
+    unicode_to_string: function (unicode){
+        const _unicode = unicode.split(",");
+        let back = "";
+        for (let i=0; i<_unicode.length; i++){
+            back += String.fromCharCode(_unicode[i]);
+        }
+        return back;
+    },
+    hex16_to_string: function (hex16) { // 除了不支持emoji外都支持
+        return decodeURIComponent(hex16);
+    },
+    string_to_hex16: function (string){ // 字符串转16进制，任意字符串（中文、emoji）
+        let hex = "";
+        for (let i = 0; i < string.length; i++) {
+            if (hex){
+                hex += "&#x"+string.charCodeAt(i).toString(16)+";";
+            }else{
+                hex = "&#x"+string.charCodeAt(i).toString(16)+";";
+            }
+        }
+        return hex;
     },
     set_cache: function (_key, _value) { // key-value对 存入系统运存，页面关闭即key-value消失
         let that = this;

@@ -58,7 +58,6 @@ function test_api(){
 
 function start_page(e){
     $(".back-div").removeClass("hide");
-    $(".body").addClass("bg-white");
 
     // test_api();
 
