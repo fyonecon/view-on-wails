@@ -25,7 +25,7 @@
     width: calc(100% - 200px);
     font-size: 14px;
     color: white;
-    height: calc(100% - 45px);
+    height: calc(100% - 45px - 10px);
     padding-bottom: 10px;
     overflow-y: auto;
     overflow-x: hidden;
