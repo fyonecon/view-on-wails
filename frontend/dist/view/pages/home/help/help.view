@@ -8,6 +8,26 @@
     <div class="tools-right-content scroll-y-style">
 
         <!---->
+        <div class="cmd-ul download-div hide">
+            <div class="cmd-group"># 安装包下载：</div>
+            <div class="cmd-li">
+                <div class="cmd-li-title">macOS通用安装包（macOS11及之后）</div>
+                <a class="cmd-li-explain a-click click font-title font-blue" data-href="https://github.com/fyonecon/view-on-wails/releases/download/v2.4.4/PureHome.Installer-amd64_arm64.dmg" data-target="_blank" download="PureHome Installer-amd64_arm64.dmg" title="点击下载">⬇️ PureHome Installer-amd64_arm64.dmg</a>
+            </div>
+            <div class="cmd-li">
+                <div class="cmd-li-title">win7（需Webview2环境）、win8.1（需Webview2环境）、win10（21H2及之后）、win11 安装包</div>
+                <a class="cmd-li-explain a-click click font-title font-blue" data-href="https://github.com/fyonecon/view-on-wails/releases/download/v2.4.4/PureHome-amd64-installer.exe" data-target="_blank" download="PureHome-amd64-installer.exe" title="点击下载">⬇️ PureHome-amd64-installer.exe</a>
+                <br/>
+                <a class="cmd-li-explain a-click click font-title font-blue" data-href="https://github.com/fyonecon/view-on-wails/releases/download/v2.4.4/PureHome-arm64-installer.exe" data-target="_blank" download="PureHome-amd64-installer.exe" title="点击下载">⬇️ PureHome-arm64-installer.exe</a>
+            </div>
+            <div class="cmd-li">
+                <div class="cmd-li-title">Webview2依赖环境下载</div>
+                <a class="cmd-li-explain a-click click font-title font-blue" data-href="https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download" data-target="_blank" download="win7、win8.1 webview2" title="点击下载">⬇️ win7、win8.1 Webview2（页面）</a>
+            </div>
+
+        </div>
+
+        <!---->
         <div class="cmd-ul">
             <div class="cmd-group"># 左下角按钮说明：</div>
             <div class="cmd-li">
