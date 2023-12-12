@@ -534,11 +534,15 @@ const view = {
         }
     },
     show_loading: function (timeout){ // (延迟几秒ms出现)
-        let _timeout = timeout*1;
-        if (_timeout<=0 || _timeout > 1000*1000){_timeout=0;}
-        setTimeout(function (){
+        if (timeout === "long"){ // 一直显示
             $(".loading-div").removeClass("hide");
-        }, _timeout);
+        }else{
+            let _timeout = timeout*1;
+            if (_timeout<=0 || _timeout > 1000*1000){_timeout=0;}
+            setTimeout(function (){
+                $(".loading-div").removeClass("hide");
+            }, _timeout);
+        }
     },
     hide_loading: function (){
         $(".loading-div").addClass("hide");

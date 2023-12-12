@@ -8,6 +8,15 @@
     <div class="tools-right-content scroll-y-style">
 
         <!---->
+        <div class="cmd-ul">
+            <div class="cmd-group"># 问题反馈Feedback：</div>
+            <div class="cmd-li">
+                <div class="cmd-li-title">作者Author：</div>
+                <div class="cmd-li-explain">fyonecon@gmail.com</div>
+            </div>
+        </div>
+
+        <!---->
         <div class="cmd-ul download-div hide">
             <div class="cmd-group"># 安装包下载：</div>
             <div class="cmd-li">
@@ -31,11 +40,11 @@
         <div class="cmd-ul">
             <div class="cmd-group"># 左下角按钮说明：</div>
             <div class="cmd-li">
-                <div class="cmd-li-title">Refresh</div>
+                <div class="cmd-li-title">🔄</div>
                 <div class="cmd-li-explain">手动刷新页面。</div>
             </div>
             <div class="cmd-li">
-                <div class="cmd-li-title blue click window_close-app" title="点击可彻底强制关闭软件">Close</div>
+                <div class="cmd-li-title blue click window_close-app" title="点击可彻底强制关闭软件">❎</div>
                 <div class="cmd-li-explain">由于软件开启了后台常驻模式，需要彻底强制关闭软件请点击此按钮。</div>
             </div>
         </div>

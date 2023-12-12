@@ -20,7 +20,7 @@
         <!--辅助功能-->
         <div class="rights-div" style="margin-top: 5px;">
             <span class="right-span click a-click" data-href="./" data-target="_self" title="Refresh the Page">🔄</span>
-            <span class="right-span click window_close-span hide" title="Close the Tab or App">❎ </span>
+            <span class="right-span click window_close-span hide" title="Close the Tab or App">❎</span>
         </div>
 
         <!--  -->

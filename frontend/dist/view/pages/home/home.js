@@ -27,12 +27,10 @@ const search = [ // 搜索引擎列表，分为移动和PC、前缀和后缀。�
         "name": "Yandex",
         "engine": "yandex",
     },
-
     {
         "name": "Github",
         "engine": "github",
     },
-
     {
         "name": "微信文章",
         "engine": "weixin",
@@ -54,7 +52,6 @@ const search = [ // 搜索引擎列表，分为移动和PC、前缀和后缀。�
         "name": "中英翻译",
         "engine": "zh_en",
     },
-
     {
         "name": "东坡下载",
         "engine": "dpxz_download",
@@ -67,6 +64,11 @@ const search = [ // 搜索引擎列表，分为移动和PC、前缀和后缀。�
         "name": "域名Whois",
         "engine": "whois",
     },
+    {
+        "name": "icon图",
+        "engine": "icons",
+    },
+
 ];
 
 
