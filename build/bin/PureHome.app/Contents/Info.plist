@@ -10,11 +10,11 @@
         <key>CFBundleIdentifier</key>
         <string>com.wails.PureHome</string>
         <key>CFBundleVersion</key>
-        <string>2.4.3</string>
+        <string>2.4.4</string>
         <key>CFBundleGetInfoString</key>
         <string>Built using Wails</string>
         <key>CFBundleShortVersionString</key>
-        <string>2.4.3</string>
+        <string>2.4.4</string>
         <key>CFBundleIconFile</key>
         <string>iconfile</string>
         <key>LSMinimumSystemVersion</key>

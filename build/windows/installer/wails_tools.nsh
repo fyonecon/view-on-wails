@@ -8,13 +8,13 @@
     !define INFO_PROJECTNAME "PureHome"
 !endif
 !ifndef INFO_COMPANYNAME
-    !define INFO_COMPANYNAME "fyonecon"
+    !define INFO_COMPANYNAME "ginvel.com"
 !endif
 !ifndef INFO_PRODUCTNAME
     !define INFO_PRODUCTNAME "PureHome"
 !endif
 !ifndef INFO_PRODUCTVERSION
-    !define INFO_PRODUCTVERSION "2.4.3"
+    !define INFO_PRODUCTVERSION "2.4.4"
 !endif
 !ifndef INFO_COPYRIGHT
     !define INFO_COPYRIGHT "Copyright fyonecon"

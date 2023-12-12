@@ -411,9 +411,9 @@ const view = {
         let class_no = "alert_txt-btn-no_" + alert_confirm_index;
 
         let div = '<div class="'+class_name+' div-alert_confirm select-none" style="z-index:'+alert_confirm_index+';">' +
-            '   <div class="div-alert_txt-title">'+title+'</div>' +
-            '   <div class="div-alert_txt-msg">'+ msg +'</div>' +
-            '   <div class="div-alert_txt-btn"><span class="'+class_no+' div-alert_txt-btn-no click float-left">No</span><span class="'+class_yes+' div-alert_txt-btn-yes click float-right">Yes</span><div class="clear"></div></div>' +
+            '   <div class="div-alert_txt-title font-text">'+title+'</div>' +
+            '   <div class="div-alert_txt-msg font-text">'+ msg +'</div>' +
+            '   <div class="div-alert_txt-btn"><span class="'+class_no+' div-alert_txt-btn-no click float-left font-black font-text">No</span><span class="'+class_yes+' div-alert_txt-btn-yes click float-right font-white font-text bg-blue">Yes</span><div class="clear"></div></div>' +
             '   <div class="clear"></div>' +
             '</div>';
         $("#depend").append(div);

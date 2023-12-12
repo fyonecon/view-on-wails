@@ -73,16 +73,16 @@ h3, h4, h5, p{
 
 /*字体大小*/
 .font-mini{
-    font-size: 14px;
+    font-size: 12px;
 }
 .font-text{
-    font-size: 16px;
+    font-size: 14px;
 }
 .font-title{
-    font-size: 18px;
+    font-size: 16px;
 }
 .font-class{
-    font-size: 22px;
+    font-size: 20px;
 }
 
 /*字颜色*/
@@ -94,6 +94,9 @@ h3, h4, h5, p{
 }
 .font-blue{
     color: #0078fe;
+}
+.font-light_blue{
+    color: deepskyblue;
 }
 .font-yellow{
     color: orange;
@@ -111,6 +114,9 @@ h3, h4, h5, p{
 }
 .bg-grey{
     background-color: #EEEEEE !important;
+}
+.bg-blue{
+    background-color: dodgerblue !important;
 }
 
 /**/

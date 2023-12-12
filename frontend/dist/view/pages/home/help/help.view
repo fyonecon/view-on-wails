@@ -1,7 +1,7 @@
 <div class="page-content">
     <div class="back-div hide">
         <a class="click a-click" data-href="./" alt="" title="返回" data-target="_self">
-            <span class="font-blue font-title"> < 返回 </span>
+            <span class="font-light_blue font-title"> ⬅️ 返回 </span>
         </a>
     </div>
 

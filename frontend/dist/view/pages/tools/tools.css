@@ -8,8 +8,7 @@
 }
 
 .tools-left-content{
-    width: calc(200px - 1px);
-    font-size: 14px;
+    width: calc(180px - 1px);
     color: white;
     background-color: rgba(205,205,205,0.1);
     border-right: 1px solid rgba(245,245,245,0);
@@ -22,8 +21,7 @@
     left: 0;
 }
 .tools-right-content{
-    width: calc(100% - 200px);
-    font-size: 14px;
+    width: calc(100% - 180px);
     color: white;
     height: calc(100% - 45px - 10px);
     padding-bottom: 10px;
@@ -59,7 +57,6 @@
     max-width: calc(100% - 20px);
     min-height: 220px;
     padding: 10px 10px;
-    font-size: 14px;
     line-height: 20px;
     border-radius: 5px;
     background-color: rgba(245,245,245,1);
@@ -68,22 +65,22 @@
 }
 .textarea-div{
     width: 100%;
-    height: 25px;
-    padding: 20px 0;
+    min-height: 25px;
+    padding: 20px 0 0 0;
     text-align: center;
     overflow: hidden;
 }
 
 .span-click-btn{
-    font-size: 15px;
-    padding: 5px 20px;
+    padding: 7px 15px;
+    line-height: 19px;
     overflow: hidden;
-    width: 70px;
     text-align: center;
     border-radius: 5px;
     background-color: rgba(245,245,245,1);
-    color: black;
-    margin-left: 15px;
     margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
+    float: left;
 }
