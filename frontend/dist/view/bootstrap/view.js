@@ -935,7 +935,7 @@ const view = {
         div.style.left = "0px";
         div.style.top = "0px";
         div.style.width = "100%";
-        div.style.height = window.innerHeight + "px";
+        div.style.height = "100%";
         div.style.backgroundColor = "rgba(255,255,255,0.2)";
         document.getElementById("depend").appendChild(div);
         if (timeout === "long"){
@@ -1098,6 +1098,14 @@ const view = {
            html = html.replaceAll(ele.black, ele.white);
         })
         return html;
+    },
+    text_encode: function (text){
+        let that = this;
+        return that.string_to_unicode(text);
+    },
+    text_decode: function (text){
+        let that = this;
+        return that.unicode_to_string(text);
     },
     ping_url: function (url, call_func){ // 检查网址是否可用，也可用于检查网址协议是否可用如https是否可用
         $.ajax({

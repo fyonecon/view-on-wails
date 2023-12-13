@@ -122,6 +122,7 @@ const pages = [
         "file"      : [
             {
                 "js": [
+                    "pages/note/note_db.js",
                     "pages/note/note.js",
                 ],
                 "css": [

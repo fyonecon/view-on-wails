@@ -3,11 +3,33 @@
         <a class="click a-click" data-href="./" alt="" title="返回" data-target="_self">
             <span class="font-light_blue font-title"> ⬅️ 返回 </span>
         </a>
+        <span class="click font-light_blue font-title float-right add-note">+ 新增&nbsp;&nbsp;</span>
     </div>
     <div class="tools-right-content-part scroll-y-style">
-        <div>
-            //
+        <div class="note-class select-none font-text">
+            <span class="note-class-tag span-btn click bg-white font-black note-class-tag-active" data-note_class_id="">全部</span>
+        </div>
+        <div class="clear"></div>
+        <div class="note-list">
+            <!---->
+            <div class="note-box font-white click" data-note_id="" data-note_class_id="" data-note_text="">
+                <div class="note-text">
+                    <div class="select-none" style="opacity:0.5;text-align: center;margin-top: 110px;">空结果</div>
+                </div>
+            </div>
 
+        </div>
+        <div class="clear"></div>
+        <div class="note-edit font-white " style="display: none;">
+            <div class="note-edit-nav font-text select-none">
+                <span class="close-note-edit span-nav-btn red click float-left hide">关闭</span>
+                <span class="update-note-edit span-nav-btn font-light_blue click float-right">完成</span>
+                <div class="clear"></div>
+            </div>
+            <div class="hide">tag</div>
+            <div class="note-edit-style note-content font-text font-white" contenteditable="true" >
+            </div>
+            <div class="hide">字数：0</div>
         </div>
     </div>
 </div>
