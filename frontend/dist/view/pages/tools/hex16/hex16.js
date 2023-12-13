@@ -10,7 +10,7 @@ $(document).on("click", ".trans-decode", function (){
     let that = $(this);
     let text_value1 = $("#textarea-1").val();
     $("#textarea-2").html("");
-    $("#textarea-2").text(view.hex16_to_string(text_value1));
+    $("#textarea-2").html(view.hex16_to_string(text_value1));
 })
 
 
