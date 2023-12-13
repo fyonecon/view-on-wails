@@ -56,7 +56,7 @@ const pages = [
     { // 页面模块
         "route"     : "login",
         "file_path" : "pages/login/login.view",
-        "title"     : "请登录..." + " - " +app_name,
+        "title"     : "请登录...",
         "file"      : [
             {
                 "js": [
@@ -73,7 +73,7 @@ const pages = [
     { // 页面模块
         "route"     : "home-help",
         "file_path" : "pages/home/help/help.view",
-        "title"     :  "使用帮助" + " - " +app_name,
+        "title"     :  "使用帮助",
         "file"      : [
             {
                 "js": [
@@ -88,7 +88,7 @@ const pages = [
     { // 页面模块
         "route"     : "search",
         "file_path" : "pages/search/search.view",
-        "title"     :  "搜索辅助跳转" + " - " +app_name,
+        "title"     :  "搜索辅助跳转",
         "file"      : [
             {
                 "js": [
@@ -103,7 +103,7 @@ const pages = [
     { // 页面模块
         "route"     : "tools",
         "file_path" : "pages/tools/tools.html",
-        "title"     :  "工具" + " - " +app_name,
+        "title"     :  "工具",
         "file"      : [
             {
                 "js": [
@@ -118,7 +118,7 @@ const pages = [
     { // 页面模块
         "route"     : "note",
         "file_path" : "pages/note/note.html",
-        "title"     :  "记事本" + " - " +app_name,
+        "title"     :  "记事本",
         "file"      : [
             {
                 "js": [

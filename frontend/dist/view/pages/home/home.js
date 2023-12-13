@@ -4,8 +4,8 @@
 "use strict";
 
 const search_debug = false; // 调试日志，false关闭日志，true显示日志
-const page_title = ""; // 当前页面标题
-const _search_jump = "";
+// const page_title = ""; // 当前页面标题
+// const _search_jump = "";
 const search = [ // 搜索引擎列表，分为移动和PC、前缀和后缀。自定义。
     {
         "name": "Bing",
@@ -205,13 +205,13 @@ function set_search(val) { // 配置当前的搜索引擎
         document.getElementsByClassName("option")[i].removeAttribute("selected");
     }
     document.getElementsByClassName("option-" + val)[0].setAttribute("selected", "selected");
-    document.getElementsByTagName("title")[0].innerText = document.getElementsByClassName("option-" + val)[0].innerText + page_title;
+    //document.getElementsByTagName("title")[0].innerText = document.getElementsByClassName("option-" + val)[0].innerText + page_title;
 }
 
 function create_input(pre) { // 渲染模板
     console_log("渲染模板数据");
 
-    document.getElementsByTagName("title")[0].innerText = page_title;
+    //document.getElementsByTagName("title")[0].innerText = page_title;
     let content = document.getElementsByClassName("content")[0];
     content.innerHTML = '<div class="input-div" id="input-div"><select class="select search-style select-none" id="select"></select><input type="text" value="" maxlength="1500" autocomplete="off" id="input" class="input search-style"  placeholder="' + pre + txt_translate.input_placeholder[lang_eq] + '" title="输入搜索内容"/><div class="clear"></div></div><div class="input-history-div" id="input-history"></div><div class="clear"></div><div class="search-btn-div" id="search-btn"></div><div class="res-div"></div>';
     let append_tag = [];
