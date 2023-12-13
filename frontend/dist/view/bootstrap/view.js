@@ -1121,69 +1121,6 @@ const view = {
             }
         });
     },
-    set_iDB_data: function (db_name, table_name, value){ // 新增或更新浏览器indexedDB数据库数据（文档：https://juejin.cn/post/7026900352968425486 ）
-        let that = this;
-        let request = db_name
-            .transaction([table_name], "readwrite") // 事务对象
-            .objectStore(table_name) // 仓库对象
-            .put(value);
-        request.onsuccess = function () {
-            that.log("数据新增或更新成功");
-        };
-        request.onerror = function () {
-            that.log("数据新增或更新失败");
-        };
-    },
-    get_iDB_data: function (db_name, table_name){ // 获取 指定表 全部数据。此处不做分页，分页请参考indexedDB文档。
-        let that = this;
-        let list = [];
-        let store = db_name
-            .transaction(table_name, "readwrite") // 事务
-            .objectStore(table_name); // 仓库对象
-        let request = store.openCursor(); // 指针对象
-        // 游标开启成功，逐行读数据
-        request.onsuccess = function (e) {
-            let cursor = e.target.result;
-            if(cursor){ // 遍历了存储对象中的所有内容
-                list.push(cursor.value);
-                cursor.continue();
-            }else{
-                that.log("游标读取的数据Success：", list);
-            }
-        }
-        request.onerror = function (e){
-            that.log("游标读取的数据Error：", list);
-        }
-        return list;
-    },
-    del_iDB_data: function (db_name, table_name, key){ // 删除一条数据
-        let that = this;
-        let request = db_name
-            .transaction([table_name], "readwrite")
-            .objectStore(table_name)
-            .delete(key);
-        request.onsuccess = function () {
-            that.log("数据删除成功");
-        };
-        request.onerror = function () {
-            that.log("数据删除失败");
-        };
-    },
-    clear_iDb: function (db_name){ // 清空指定数据库全部数据
-        let that = this;
-        let deleteRequest = window.indexedDB.deleteDatabase(db_name);
-        deleteRequest.onerror = function (event) {
-            that.log("清空数据库失败");
-        };
-        deleteRequest.onsuccess = function (event) {
-            that.log("清空数据库成功");
-        };
-    },
-    close_iDB: function (db_name){ // 关闭连接数据库
-        let that = this;
-        db_name.close();
-        that.log("关闭连接数据库");
-    },
     is_wails: function (){
         let that = this;
         let url = window.location.host;

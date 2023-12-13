@@ -9,7 +9,7 @@
 .notice_txt-box{max-height: calc(100% - 120px - 10px);overflow: hidden;width: 260px;position: fixed;z-index: 20241210;
     /*left:0;*/
     top: 60px;
-    right: 10px;
+    right: 15px;
 }
 @media only screen and (max-width: 779px) {
     .notice_txt-box{

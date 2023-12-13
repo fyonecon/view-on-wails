@@ -7,6 +7,7 @@
 // 2. 注册全局组件
 const page_public_file = {
     "js": [
+        "static/js/DB.dexie.js", // 文档：https://dexie.org/docs/Tutorial/Hello-World
         "static/js/page_all.js", // 自定义的全局调用函数
         //"static/layui/layui.js", // 文档：https://www.layui.com/doc/
     ],

@@ -35,7 +35,6 @@ function clear_all_data(){
         if (state){ // yes
             view.show_mask(3000);
             view.clear_data();
-            view.clear_iDb();
             view.refresh_page(1000);
         }else { // no
             //

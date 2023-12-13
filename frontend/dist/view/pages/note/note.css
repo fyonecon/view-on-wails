@@ -41,6 +41,15 @@
     margin-right: 10px;
     float: left;
     overflow: hidden;
+    position: relative;
+}
+.del-note{
+    top: 5px;
+    right: 10px;
+    width: 20px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
 }
 .note-text{
     padding: 10px 15px;
