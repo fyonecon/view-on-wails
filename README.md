@@ -8,10 +8,12 @@
 
 >外挂（调用）wailsjs请直接使用window.runtime.xxx来调用。
 
-截图：
+Mac:
 ![简单主页（PureHome）-mac](./资料、备份、已打包程序/已打包软件/mac.png)
+Win:
 ![简单主页（PureHome）-Win](./资料、备份、已打包程序/已打包软件/win.png)
-
+PWA:
+![简单主页（PureHome）-Win](./资料、备份、已打包程序/已打包软件/pwa-win.png)
 
 ## 运行环境
 #### Mac平台（需macOS11+）
