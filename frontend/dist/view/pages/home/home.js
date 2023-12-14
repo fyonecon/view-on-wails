@@ -1283,10 +1283,12 @@ function start_page(info) {
         // },200);
         // $(".contact-div").removeClass("hide");
         $(".battery-model-div").removeClass("hide");
+        $(".notes-span").removeClass("hide");
         $(".tools-span").removeClass("hide");
         // $(".content-bg").addClass("hide");
     }else { // m
         // $(".timer-div").removeClass("hide");
+        $(".notes-span").removeClass("hide");
     }
 
     //
@@ -1294,6 +1296,7 @@ function start_page(info) {
         $(".qr-div-div").addClass("hide");
         $(".window_close-span").removeClass("hide");
         $(".change-color-div").removeClass("hide");
+        $(".notes-span").removeClass("hide");
         $(".tools-span").removeClass("hide");
     }
 
