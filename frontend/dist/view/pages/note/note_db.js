@@ -1,9 +1,5 @@
 // 操作数据库。文档：https://jsstore.net/docs/connection
 
-// note_class_id user_id note_class_name note_class_order
-// note_id user_id note_class_id note_text update_time
-
-
 // 连接数据库，获取表对象
 let DB; // 数据库
 let NoteClass; // table
@@ -53,7 +49,7 @@ function update_data(note_id, user_id, note_class_id, note_text, update_time) {
             // 目标表 插入/更新数据
             return Note.bulkPut([data]).then((res)=>{
                 view.log("成功插入数据=", res);
-                return res;
+                return [res, note_id];
             });
         });
     }else {
@@ -67,7 +63,7 @@ function update_data(note_id, user_id, note_class_id, note_text, update_time) {
         // 目标表 插入/更新数据
         return Note.bulkPut([data]).then((res)=>{
             view.log("成功插入数据=", res);
-            return res;
+            return [res, note_id];
         });
     }
 }

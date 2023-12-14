@@ -1,8 +1,12 @@
 
 // 新增或更新（顺便删除xss代码）
 // update_note
-function update_note(){
-    view.show_loading("long");
+function update_note(where){
+    if (where === "btn"){
+        view.show_loading("long");
+    }else if (where === "auto"){
+        view.log("auto");
+    }
 
     //
     let note_text = $(".note-content").html();
@@ -14,28 +18,39 @@ function update_note(){
         let note_class_id = note.attr("data-note_class_id")*1;
         let user_id = userID;
         let update_time = view.time_date("YmdHis")*1;
-        if (!user_id || !note_class_id){
-            view.notice_txt("必要参数不完整", 2000);
+        if (!user_id){
+            view.notice_txt("必要参数不完整，不能保存", 3000);
+            $(".close-note-edit").removeClass("hide");
             view.hide_loading();
-            console.log("必要参数不完整：", [user_id, note_class_id]);
         }else{
             //
-            update_data(note_id, user_id, note_class_id, save_note_text, update_time).then((res) => {
-                console.log("update_data：", res)
-                if (res){
+            update_data(note_id, user_id, note_class_id, save_note_text, update_time).then((back) => {
+                view.log("update_data：", back)
+                if (back[0]){
                     // view.notice_txt("保存成功", 2000);
-                    list_note(note_class_id, user_id);
+                    if (where === "btn"){
+                        list_note(note_class_id, user_id);
+                    }else if (where === "auto"){
+                        view.log("已自动保存，并设置data-note_id=", back[1]);
+                        note.attr("data-note_id", back[1]); // 防止数据重复（即下次就是修改数据）
+                    }
                 }else{
                     view.notice_txt("保存失败", 2000);
                 }
-                close_note_window();
-                view.hide_loading();
+                if (where === "btn"){
+                    close_note_window();
+                    view.hide_loading();
+                }else if (where === "auto"){
+                    view.log("已自动保存");
+                }
             });
         }
     }else{ // 空值
-        view.notice_txt("未新建", 2000);
-        close_note_window();
-        view.hide_loading();
+        view.log("未新建", 2000);
+        if (where === "btn"){
+            close_note_window();
+            view.hide_loading();
+        }
     }
 }
 
@@ -46,7 +61,7 @@ function del_note(note_id, user_id){
         if (res>0){
             view.notice_txt("删除成功", 2000);
         }else{
-            console.log("del_note", [note_id, user_id]);
+            view.log("del_note", [note_id, user_id]);
             view.notice_txt("删除失败或数据不存在", 2000);
         }
         //
@@ -57,12 +72,10 @@ function del_note(note_id, user_id){
 
 // 获取指定分类列表
 function list_note(note_class_id, user_id){
-    // 展示
-    let note_text = "";
-    let show_note_text = view.text_decode(note_text);
+    view.show_loading("long");
     //
     get_date(note_class_id, user_id).then((list)=>{
-        console.log("list：", list);
+        view.log("list：", list);
         if (list.length > 0){
             // view.notice_txt("查询成功", 2000);
             $(".note-list").html("");
@@ -74,15 +87,18 @@ function list_note(note_class_id, user_id){
                 let note_text = row.note_text; note_text = view.text_decode(note_text);
                 let update_time = row.update_time;
 
-                let dom = '<div class="note-box font-white click" data-note_id="'+note_id+'" data-note_class_id="'+note_class_id+'" ><div class="del-note font-text click select-none">❎</div><div class="note-text">' + note_text +
-                    '</div><div class="note-text">' +
+                let dom = '<div class="note-box font-white" data-note_id="'+note_id+'" data-note_class_id="'+note_class_id+'" >' +
+                    '<div class="del-note font-text click select-none">❎</div>' +
+                    '<div class="note-text">' + note_text + '</div>' +
+                    '<div class="update_time-note font-text">🕙 '+update_time+'</div>' +
                     '</div>';
 
                 $(".note-list").append(dom);
-            })
+            });
         }else{
             view.notice_txt("查询无数据", 2000);
         }
+        view.hide_loading();
     });
 }
 
@@ -90,29 +106,60 @@ function list_note(note_class_id, user_id){
 function init_note_window(){
     let note = $(".note-content");
     note.html("");
-    note.attr("data-note_id", "");
-    note.attr("data-note_class_id", "");
+    note.attr("data-note_id", ""); // 空值使为 默认最大ID的数值
+    note.attr("data-note_class_id", ""); // 空值使为 全部
+    $(".close-note-edit").addClass("hide");
 }
 // 关闭窗口
 function close_note_window(){
     init_note_window();
+    // 处理自动数据
+    clearInterval(word_num_timer);
+    clearInterval(word_auto_save_timer);
+    $(".note-state-num").html("有效字数：-");
+    $(".note-state-update").html("保存状态：-");
+    // 关闭窗口
     $(".note-edit").slideUp("fast");
 }
 // 打开窗口
 function open_note_window(){
+    // 打开窗口
     $(".note-edit").slideDown("slow");
+    // 统计字数
+    word_num_timer = setInterval(function (){
+        get_word_num();
+    }, 2000);
+    // 自动保存
+    word_auto_save_timer = setInterval(function (){
+        word_auto_save();
+    }, 6000);
+}
+// 统计次数
+let word_num_timer;
+function get_word_num(){
+    let num = $(".note-content").text().length;
+    $(".note-state-num").html("有效字数："+num);
+}
+// 自动保存
+let word_auto_save_timer;
+function word_auto_save(){
+    $(".note-state-update").html("保存状态：已保存「"+view.time_date("H:i:s")+"」");
+    //
+    update_note("auto");
 }
 
+// 新增笔记
 $(document).on("click", ".add-note", function (){
     let that = $(this);
     open_note_window();
 });
+// 查看笔记
 $(document).on("click", ".note-text", function (){
     let that = $(this);
     let note_id = that.parent(".note-box").attr("data-note_id");
     let note_class_id = that.parent(".note-box").attr("data-note_class_id");
     let note_text = that.html();
-    console.log("note-box", [note_id, note_class_id, note_text, that.find(".note-text")]);
+    view.log("note-box", [note_id, note_class_id, note_text, that.find(".note-text")]);
     //
     if (!note_id || !note_class_id || !note_text){ // 没有就新增
         open_note_window();
@@ -127,6 +174,7 @@ $(document).on("click", ".note-text", function (){
         open_note_window();
     }
 });
+// 删除笔记
 $(document).on("click", ".del-note", function (){
     let that = $(this);
     view.alert_confirm("⚠️", "确认删除 ？", function (state){
@@ -138,15 +186,17 @@ $(document).on("click", ".del-note", function (){
         }
     });
 });
+// 保存/完成编辑笔记
 $(document).on("click", ".update-note-edit", function (){
     let that = $(this);
-    update_note();
+    update_note("btn");
 });
+// 关闭编辑
 $(document).on("click", ".close-note-edit", function (){
     let that = $(this);
     view.alert_confirm("⚠️", "保存内容 ？", function (state){
         if (state){
-            update_note();
+            update_note("btn");
         }else{
             $(".note-edit").slideUp("slow");
         }
