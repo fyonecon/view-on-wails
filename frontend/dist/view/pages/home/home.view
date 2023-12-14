@@ -7,11 +7,11 @@
     </code>
     <!--背部特效-->
     <div class="content-bg" id="content-bg"></div>
-    <div class="left-fixed">
+    <div class="left-fixed select-none">
 
         <!--更多信息-->
-        <div class="rights-div hide">
-            <span class="right-span a-click click tools-span hide" data-href="./?route=note" data-target="_self" title="打开记事本">Note</span>
+        <div class="rights-div ">
+            <span class="right-span a-click click tools-span " data-href="./?route=notes" data-target="_self" title="打开记事本">Notes</span>
         </div>
         <div class="rights-div">
             <span class="right-span a-click click tools-span hide" data-href="./?route=tools" data-target="_self" title="Tools">Tools</span>

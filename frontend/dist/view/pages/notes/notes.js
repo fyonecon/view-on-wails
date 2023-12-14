@@ -227,7 +227,7 @@ function run_parts(text, data){
     // init db
     init_DB();
     // init dom
-    if (view.get_url_param("", "route") === "note"){ // 单页
+    if (view.get_url_param("", "route") === "notes"){ // 单页
         $(".back-div").removeClass("hide");
         $(".page-content-choose").addClass("page-content");
         $(".tools-right-content-part").addClass("tools-right-content-part-style");
@@ -241,7 +241,7 @@ function run_parts(text, data){
 
 function start_page(){
     //
-    if (view.get_url_param("", "route") === "note"){ // 单页
+    if (view.get_url_param("", "route") === "notes"){ // 单页
         run_parts("记事本", []);
     }else { // 组件
         view.log("跳过");

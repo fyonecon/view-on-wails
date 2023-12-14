@@ -1,8 +1,7 @@
-/*自定义全局css，公用css*/
-@charset "UTF-8";
+@charset "UTF-8"; /*自定义全局css，公用css*/
 
 body, html{
-    font-family: "Noto Sans Light" !important; /*默认思源黑体Apache开源协议字体*/
+    font-family: "Noto Sans Light", sans-serif !important; /*默认思源黑体Apache开源协议字体*/
 }
 h1, h2{
     margin-top: 0;
@@ -43,7 +42,7 @@ h3, h4, h5, p{
 }
 .scroll-y-style::-webkit-scrollbar{
     width: 5px;
-    background-color: rgba(205,205,205,0.3);
+    background-color: rgba(205,205,205,0);
 }
 .scroll-y-style::-webkit-scrollbar-thumb{
     border-radius: 5px;
@@ -73,10 +72,10 @@ h3, h4, h5, p{
 
 /*字体大小*/
 .font-mini{
-    font-size: 12px;
+    font-size: 13px;
 }
 .font-text{
-    font-size: 14px;
+    font-size: 15px;
 }
 .font-title{
     font-size: 16px;
@@ -213,10 +212,10 @@ img{
     user-select: none;
 }
 .click:active{
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .click:hover{
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .hover:hover{

@@ -32,8 +32,8 @@ function check_input_kw(_word){
         url = "./?route=search&word="+_word;
         view.window_open(url, "_self");
     }
-    else if (word === "kw@note"){
-        url = "./?route=note&cache="+view.time_date("YmdHis");
+    else if (word === "kw@notes"){
+        url = "./?route=notes&cache="+view.time_date("YmdHis");
         view.window_open(url, "_self");
     }
 

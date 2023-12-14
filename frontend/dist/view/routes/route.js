@@ -117,17 +117,17 @@ const pages = [
         ],
     }, //
     { // 页面模块
-        "route"     : "note",
-        "file_path" : "pages/note/note.html",
+        "route"     : "notes",
+        "file_path" : "pages/notes/notes.html",
         "title"     :  "记事本",
         "file"      : [
             {
                 "js": [
-                    "pages/note/note_db.js",
-                    "pages/note/note.js",
+                    "pages/notes/notes_db.js",
+                    "pages/notes/notes.js",
                 ],
                 "css": [
-                    "pages/note/note.css",
+                    "pages/notes/notes.css",
                 ],
             },
         ],
