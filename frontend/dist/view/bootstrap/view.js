@@ -393,6 +393,24 @@ const view = {
 
         return format;
     },
+    date_format: function (date, format){ // (只YmdHis格式, 新YmdHis格式)
+        date = date+""; // 必须string
+        let year = date.slice(0,4);
+        let month = date.slice(4,6);
+        let day = date.slice(6,8);
+        let hour = date.slice(8,10);
+        let minutes = date.slice(10,12);
+        let seconds = date.slice(12,14);
+
+        format = format.replaceAll("Y", year);
+        format = format.replaceAll("m", month);
+        format = format.replaceAll("d", day);
+        format = format.replaceAll("H", hour);
+        format = format.replaceAll("i", minutes);
+        format = format.replaceAll("s", seconds);
+
+        return format;
+    },
     alert_confirm: function (title, msg, call_func) { // 文字提醒弹窗，会遮挡页面操作。(文字，超时时间，清除所有提示<仅限不为long时>)
         let that = this;
 

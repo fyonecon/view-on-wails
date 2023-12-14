@@ -13,7 +13,7 @@ function check_input_kw(_word){
         view.window_open(url, "_self");
     }
     // else if (word === "kw@help"){
-    //     url = "./?route=home-help";
+    //     url = "./?route=help";
     //     view.window_open(url, "_self");
     // }
     else if (word === "kw@404"){

@@ -31,6 +31,11 @@ function update_note(where){
                     if (where === "btn"){
                         list_note(note_class_id, user_id);
                     }else if (where === "auto"){
+                        if (!note_id){
+                            $(".note-state-update").html("保存状态：已保存「"+view.time_date("H:i:s")+"」");
+                        }else {
+                            $(".note-state-update").html("保存状态：已更新「"+view.time_date("H:i:s")+"」");
+                        }
                         view.log("已自动保存，并设置data-note_id=", back[1]);
                         note.attr("data-note_id", back[1]); // 防止数据重复（即下次就是修改数据）
                     }
@@ -50,6 +55,8 @@ function update_note(where){
         if (where === "btn"){
             close_note_window();
             view.hide_loading();
+        }else if (where === "auto"){
+            $(".note-state-update").html("保存状态：空内容");
         }
     }
 }
@@ -86,11 +93,12 @@ function list_note(note_class_id, user_id){
                 let note_class_id = row.note_class_id;
                 let note_text = row.note_text; note_text = view.text_decode(note_text);
                 let update_time = row.update_time;
+                update_time = view.date_format(update_time, "Y-m-d");
 
                 let dom = '<div class="note-box font-white" data-note_id="'+note_id+'" data-note_class_id="'+note_class_id+'" >' +
                     '<div class="del-note font-text click select-none">❎</div>' +
-                    '<div class="note-text">' + note_text + '</div>' +
-                    '<div class="update_time-note font-text">🕙 '+update_time+'</div>' +
+                    '<div class="note-text font-text">' + note_text + '</div>' +
+                    '<div class="update_time-note font-text"><code class="update_time-note-id font-mini">'+note_id+'</code><code class="update_time-note-date font-mini">'+update_time+'</code><div class="clear"></div></div>' +
                     '</div>';
 
                 $(".note-list").append(dom);
@@ -143,7 +151,6 @@ function get_word_num(){
 // 自动保存
 let word_auto_save_timer;
 function word_auto_save(){
-    $(".note-state-update").html("保存状态：已保存「"+view.time_date("H:i:s")+"」");
     //
     update_note("auto");
 }
@@ -201,6 +208,13 @@ $(document).on("click", ".close-note-edit", function (){
             $(".note-edit").slideUp("slow");
         }
     });
+});
+
+// 手动刷新
+$(document).on("click", ".refresh-note", function (){
+    let that = $(this);
+    //
+    list_note(0, userID);
 });
 
 // 用户ID

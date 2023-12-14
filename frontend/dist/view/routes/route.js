@@ -72,16 +72,16 @@ const pages = [
     // 结束-必要路由
 
     { // 页面模块
-        "route"     : "home-help",
-        "file_path" : "pages/home/help/help.view",
+        "route"     : "help",
+        "file_path" : "pages/help/help.view",
         "title"     :  "使用帮助",
         "file"      : [
             {
                 "js": [
-                    "pages/home/help/help.js",
+                    "pages/help/help.js",
                 ],
                 "css": [
-                    "pages/home/help/help.css",
+                    "pages/help/help.css",
                 ],
             },
         ],

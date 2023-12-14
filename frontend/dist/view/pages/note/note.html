@@ -3,7 +3,8 @@
         <a class="click a-click" data-href="./" alt="" title="返回" data-target="_self">
             <span class="font-light_blue font-title"> ⬅️ 返回 </span>
         </a>
-        <span class="click font-light_blue font-title float-right add-note">+ 新增&nbsp;&nbsp;</span>
+        <span class="click font-light_blue font-title float-right add-note nav-span-btn">✣ 新增</span>
+        <span class="click font-light_blue font-title float-right refresh-note nav-span-btn">◎ 刷新</span>
     </div>
     <div class="tools-right-content-part scroll-y-style">
 
@@ -19,10 +20,14 @@
             <div class="note-box font-white hide" data-note_id="" data-note_class_id="">
                 <div class="del-note font-text click select-none">❎</div>
                 <!--笔记内容-->
-                <div class="note-text">
+                <div class="note-text font-text">
                     <div class="select-none" style="opacity:0.5;text-align: center;margin-top: 110px;">空结果</div>
                 </div>
-                <div class="update_time-note font-text">🕙</div>
+                <div class="update_time-note font-text">
+                    <code class="update_time-note-id font-mini">-</code>
+                    <code class="update_time-note-date font-mini">🕙 </code>
+                    <div class="clear"></div>
+                </div>
             </div>
 
         </div>
@@ -31,17 +36,19 @@
         <!--编辑-->
         <div class="note-edit font-white " style="display: none;">
             <!--按钮-->
-            <div class="note-edit-nav font-text select-none">
-                <span class="close-note-edit span-nav-btn red click float-left hide">关闭</span>
-                <span class="update-note-edit span-nav-btn font-light_blue click float-right">完成</span>
+            <div class="note-edit-nav select-none">
+                <span class="close-note-edit span-nav-btn font-title red click float-left hide">关闭</span>
+                <span class="update-note-edit span-nav-btn font-title font-light_blue click float-right">完成</span>
                 <div class="clear"></div>
             </div>
             <!--编辑框-->
+            <div class="note-tag"></div>
             <div class="note-edit-style note-content font-text font-white" contenteditable="true" data-note_id="" data-note_class_id=""></div>
             <!--其他信息-->
-            <div class="note-state-style font-text font-white">
-                <span class="note-state-span note-state-num">有效字数：-</span>
-                <span class="note-state-span note-state-update">保存状态：-</span>
+            <div class="note-state-style font-white">
+                <div class="note-state-span font-text note-state-num">有效字数：-</div>
+                <div class="note-state-span font-text note-state-update">保存状态：-</div>
+                <div class="clear"></div>
             </div>
         </div>
 

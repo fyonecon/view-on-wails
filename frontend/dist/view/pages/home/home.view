@@ -17,7 +17,7 @@
             <span class="right-span a-click click tools-span hide" data-href="./?route=tools" data-target="_self" title="Tools">Tools</span>
         </div>
         <div class="rights-div">
-            <span class="right-span a-click click" data-href="./?route=home-help" data-target="_self" title="Help Docs">Help</span>
+            <span class="right-span a-click click" data-href="./?route=help" data-target="_self" title="Help Docs">Help</span>
         </div>
 
         <!--辅助功能-->
