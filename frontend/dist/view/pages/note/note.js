@@ -66,10 +66,11 @@ function del_note(note_id, user_id){
     note_id = note_id*1;
     del_data(note_id, user_id).then((res)=>{
         if (res>0){
-            view.notice_txt("删除成功", 2000);
+            view.notice_txt("已删除："+note_id, 2000);
         }else{
             view.log("del_note", [note_id, user_id]);
             view.notice_txt("删除失败或数据不存在", 2000);
+            view.refresh_page(1500);
         }
         //
         list_note(0, userID);
@@ -105,6 +106,7 @@ function list_note(note_class_id, user_id){
             });
         }else{
             view.notice_txt("查询无数据", 2000);
+            $(".note-list").html("");
         }
         view.hide_loading();
     });
