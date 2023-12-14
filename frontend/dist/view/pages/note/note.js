@@ -138,11 +138,11 @@ function open_note_window(){
     // 统计字数
     word_num_timer = setInterval(function (){
         get_word_num();
-    }, 2000);
+    }, 3000);
     // 自动保存
     word_auto_save_timer = setInterval(function (){
         word_auto_save();
-    }, 6000);
+    }, 9000);
 }
 // 统计次数
 let word_num_timer;
