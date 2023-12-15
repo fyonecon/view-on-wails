@@ -35,11 +35,12 @@
 .note-box{
     width: calc(100%/1 - 20px - 2px - 20px);
     background-color: rgba(205,205, 205, 0.1);
-    height: 195px;
+    min-height: 75px;
+    max-height: 195px;
     border-radius: 10px;
     border: 1px solid rgba(245,245,245,0.2);
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
@@ -88,7 +89,8 @@
 .note-text{
     padding: 0 0;
     border-radius: 5px;
-    height: 185px;
+    min-height: 65px;
+    max-height: 185px;
     width: calc(100% - 0px);
     overflow: hidden;
     line-height: 26px;
