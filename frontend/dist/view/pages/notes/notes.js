@@ -11,13 +11,14 @@ function update_note(where){
     //
     let note_text = $(".note-content").html();
     if (note_text){ // 有值
-        let save_note_text = view.text_encode(view.filter_xss(note_text));
-        //
         let note = $(".note-content");
+        // 必须固定格式，防止加密、解密时报错
         let note_id = note.attr("data-note_id")*1;
         let note_class_id = note.attr("data-note_class_id")*1;
-        let user_id = userID;
+        let save_note_text = view.text_encode(view.filter_xss(note_text)) + " "; // 必须为string
+        let user_id = userID + ""; // 必须为string
         let update_time = view.time_date("YmdHis")*1;
+        //
         if (!user_id){
             view.notice_txt("必要参数不完整，不能保存", 3000);
             $(".close-note-edit").removeClass("hide");
