@@ -51,7 +51,7 @@
     position: relative;
 }
 .note-box:hover{
-    border: 1px solid rgba(245,245,245,0.6);
+    border: 1px solid rgba(245,245,245,0.4);
 }
 .del-note{
     top: 5px;
@@ -60,6 +60,7 @@
     text-align: center;
     line-height: 30px;
     position: absolute;
+    opacity: 0.5;
 }
 .update_time-note{
     bottom: 0;
@@ -70,20 +71,20 @@
     line-height: 30px;
     height: 30px;
     position: absolute;
-    background-color: rgba(245,245,245,0.1);
+    background-color: rgba(245,245,245,0);
     overflow: hidden;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 .update_time-note-id{
     width: 60px;
-    float: left;
-    text-align: left;
+    float: right;
+    text-align: right;
     overflow: hidden;
 }
 .update_time-note-date{
     width: calc(100% - 60px - 5px);
-    float: right;
-    text-align: right;
+    float: left;
+    text-align: left;
     overflow: hidden;
 }
 .note-text{

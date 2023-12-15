@@ -335,7 +335,6 @@ function init_dom() {
         '              <span class="search-btn-style href-btn-span click"  data-href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield">CN十年国债</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://cn.investing.com/rates-bonds/u.s.-10-year-bond-yield">US十年国债</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://cn.investing.com/indices/volatility-s-p-500">VIX恐慌</span>' +
-
         '              <div class="clear"></div>' +
         '           </div>' +
 
@@ -343,22 +342,20 @@ function init_dom() {
         '              <span class="search-btn-style href-btn-span click"  data-href="https://cn.investing.com/commodities/crude-oil">WTI原油</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://cn.investing.com/currencies/us-dollar-index">美元指数</span>' +
         '               <span class="search-btn-style href-btn-span click"  data-href="https://danjuanapp.com/valuation-table/jiucai">股债利差</span>' +
-
         '              <div class="clear"></div>' +
         '           </div>' +
 
         '           <div class="search-btn-center quick-btn-center ">' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://www.huxiu.com/moment/">虎嗅7x24</span>' +
-        '              <span class="search-btn-style href-btn-span click"  data-href="http://finance.sina.com.cn/7x24/">新浪7x24</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="http://finance.sina.com.cn/stock/sl/#industry_1">新浪行业股</span>' +
+        '              <span class="search-btn-style href-btn-span click"  data-href="http://www.ruanyifeng.com/blog/">阮一峰周刊</span>' +
         '              <div class="clear"></div>' +
         '           </div>' +
 
         '           <div class="search-btn-center quick-btn-center ">' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://m.ithome.com">IT之家</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://www.v2ex.com/">V2EX</span>' +
-        '              <span class="search-btn-style href-btn-span click"  data-href="http://www.ruanyifeng.com/blog/">阮一峰周刊</span>' +
-
+        '              <span class="search-btn-style href-btn-span click"  data-href="https://machbbs.com/v2ex/">V2EX·非常</span>' +
         '              <div class="clear"></div>' +
         '           </div>' +
 
@@ -390,6 +387,12 @@ function init_dom() {
         '              <div class="clear"></div>' +
         '           </div>' +
 
+        '           <div class="search-btn-center quick-btn-center">' +
+        '              <span class="search-btn-style href-btn-span click"  data-href="https://devv.ai/zh">程序AI搜索</span>' +
+
+        '              <div class="clear"></div>' +
+        '           </div>' +
+
         '       </div>' +
 
         //--
@@ -412,14 +415,6 @@ function init_dom() {
         '              <span class="search-btn-style href-btn-span click"  data-href="https://onedrive.live.com/">OneDrive</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://beta.icloud.com/">iCloud+</span>' +
         '              <span class="search-btn-style href-btn-span click"  data-href="https://www.windy.com/">Windy</span>' +
-        '              <div class="clear"></div>' +
-        '           </div>' +
-
-        '           <div class="search-btn-center quick-btn-center">' +
-        '              <span class="search-btn-style href-btn-span click"  onclick="show_full_screen(this) " data-href="https://didayu.cn/updates/win10/index.htm">🐟Win加载</span>' +
-        '              <span class="search-btn-style href-btn-span click"  onclick="show_full_screen(this) " data-href="https://didayu.cn/updates/apple/index.htm">🐟Mac加载</span>' +
-
-
         '              <div class="clear"></div>' +
         '           </div>' +
 
@@ -1070,7 +1065,7 @@ function make_swiper(){
         keyboard: { // 键盘方向键控制
             enabled: true,
         },
-        // mousewheel: true, // 鼠标滚轮控制
+        mousewheel: true, // 鼠标滚轮控制
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -1331,8 +1326,10 @@ function start_page(info) {
         let swiper_container_show = view.get_data("swiper_container_show");
         if (swiper_container_show === "show"){ // show
             $(".swiper-container").removeClass("hide");
-        }else { // hide
+        }else if (swiper_container_show === "hide") { // hide
             $(".swiper-container").addClass("hide");
+        }else{
+            $(".swiper-container").removeClass("hide");
         }
     }, 200);
 

@@ -470,20 +470,20 @@
     position: fixed;
     z-index: 20230306;
     bottom: calc(10px);
-    left: 0px;
+    left: 0;
     padding-left: 10px;
     overflow: hidden;
-    width: 220px;
+    width: 190px;
     text-align: left;
 }
 .right-fixed{
     position: fixed;
     z-index: 20230305;
     bottom: calc(10px);
-    right: 0px;
+    right: 0;
     padding-right: 10px;
     overflow: hidden;
-    width: 220px;
+    width: 190px;
     text-align: right;
 }
 
@@ -533,9 +533,9 @@
     width: 100%;
 }
 .rights-div{
-    line-height: 24px;
-    height: 24px;
-    font-size: 12px;
+    line-height: 26px;
+    height: 26px;
+    font-size: 13px;
 }
 .contact-div{
     line-height: 24px;
@@ -548,6 +548,7 @@
 }
 .right-span{
     margin-right: 10px;
+    padding: 3px 5px 3px 0;
 }
 
 

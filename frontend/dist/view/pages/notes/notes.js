@@ -100,7 +100,7 @@ function list_note(note_class_id, user_id){
                 let dom = '<div class="note-box font-white" data-note_id="'+note_id+'" data-note_class_id="'+note_class_id+'" >' +
                     '<div class="del-note font-text click select-none">❎</div>' +
                     '<div class="note-text font-text break-ellipsis">' + note_text + '</div>' +
-                    '<div class="update_time-note font-text"><code class="update_time-note-id font-mini">'+note_id+'</code><code class="update_time-note-date font-mini">'+update_time+'</code><div class="clear"></div></div>' +
+                    '<div class="update_time-note font-text"><code class="update_time-note-date font-mini">'+update_time+'</code><code class="update_time-note-id font-mini">'+note_id+'</code><div class="clear"></div></div>' +
                     '</div>';
 
                 $(".note-list").append(dom);
@@ -113,8 +113,8 @@ function list_note(note_class_id, user_id){
                 '    <div class="select-none" style="opacity:0.5;text-align: center;margin-top: 80px;">空列表</div>' +
                 '</div>' +
                 '<div class="update_time-note font-text">' +
-                '    <code class="update_time-note-id font-mini">0</code>' +
                 '    <code class="update_time-note-date font-mini">🕙 </code>' +
+                '    <code class="update_time-note-id font-mini">0</code>' +
                 '    <div class="clear"></div>' +
                 '</div>' +
                 '</div>';
@@ -134,19 +134,21 @@ function init_note_window(){
 }
 // 关闭窗口
 function close_note_window(){
-    init_note_window();
+    setTimeout(function (){
+        init_note_window();
+    }, 450);
     // 处理自动数据
     clearInterval(word_num_timer);
     clearInterval(word_auto_save_timer);
     $(".note-state-num").html("有效字数：-");
     $(".note-state-update").html("保存状态：-");
     // 关闭窗口
-    $(".note-edit").slideUp("fast");
+    $(".note-edit").slideUp("normal");
 }
 // 打开窗口
 function open_note_window(){
     // 打开窗口
-    $(".note-edit").slideDown("slow");
+    $(".note-edit").slideDown("fast");
     // 统计字数
     word_num_timer = setInterval(function (){
         get_word_num();

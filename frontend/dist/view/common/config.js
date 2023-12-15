@@ -27,9 +27,9 @@ const app_url = {
 
 // 自定义
 // App验证参数
-const app_class = "view_";
+const app_class = "view_"; // 必须为string，且必须唯一
 const app_version = "v2";
-const app_name = "简单主页";
+const app_name = "PureHome（简单主页）";
 const app_email = "";
 
 // 登录用户使用的验证参数
