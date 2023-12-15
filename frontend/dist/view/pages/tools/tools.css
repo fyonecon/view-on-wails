@@ -57,13 +57,15 @@
     max-width: calc(100% - 20px);
     min-height: 220px;
     padding: 10px 10px;
-    line-height: 20px;
+    line-height: 26px;
     border-radius: 10px;
     background-color: rgba(205,205, 205, 0.1);
     color: white;
     overflow-x: hidden;
     border: 1px solid rgba(205,205, 205, 0.3);
     outline: none;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 .textarea-div{
     width: 100%;

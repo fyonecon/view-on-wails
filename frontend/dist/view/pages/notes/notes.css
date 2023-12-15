@@ -10,7 +10,6 @@
     right: 0;
 }
 .nav-span-btn{
-    margin-right: 10px;
     margin-left: 20px;
 }
 .note-class{
@@ -36,7 +35,7 @@
 .note-box{
     width: calc(100%/1 - 20px - 2px - 20px);
     background-color: rgba(205,205, 205, 0.1);
-    height: 200px;
+    height: 195px;
     border-radius: 10px;
     border: 1px solid rgba(245,245,245,0.2);
     padding-top: 10px;
@@ -89,7 +88,7 @@
 .note-text{
     padding: 0 0;
     border-radius: 5px;
-    height: 190px;
+    height: 185px;
     width: calc(100% - 0px);
     overflow: hidden;
     line-height: 26px;
@@ -173,6 +172,18 @@
     height: calc(100% - 50px - 85px);
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.note-edit-style img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.note-text img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .note-state-style{

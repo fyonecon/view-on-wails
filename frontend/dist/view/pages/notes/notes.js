@@ -99,7 +99,7 @@ function list_note(note_class_id, user_id){
 
                 let dom = '<div class="note-box font-white" data-note_id="'+note_id+'" data-note_class_id="'+note_class_id+'" >' +
                     '<div class="del-note font-text click select-none">❎</div>' +
-                    '<div class="note-text font-text">' + note_text + '</div>' +
+                    '<div class="note-text font-text break-ellipsis">' + note_text + '</div>' +
                     '<div class="update_time-note font-text"><code class="update_time-note-id font-mini">'+note_id+'</code><code class="update_time-note-date font-mini">'+update_time+'</code><div class="clear"></div></div>' +
                     '</div>';
 
@@ -109,7 +109,7 @@ function list_note(note_class_id, user_id){
             // view.notice_txt("查询无数据", 2000);
             let dom = '<div class="note-box font-white " data-note_id="" data-note_class_id="">' +
                 '<div class="del-note font-text click select-none hide">❎</div>' +
-                '<div class="note-text font-text">' +
+                '<div class="note-text font-text break-ellipsis">' +
                 '    <div class="select-none" style="opacity:0.5;text-align: center;margin-top: 80px;">空列表</div>' +
                 '</div>' +
                 '<div class="update_time-note font-text">' +
@@ -198,9 +198,9 @@ $(document).on("click", ".note-text", function (){
 // 删除笔记
 $(document).on("click", ".del-note", function (){
     let that = $(this);
-    view.alert_confirm("⚠️", "确认删除 ？", function (state){
+    let note_id = that.parent(".note-box").attr("data-note_id");
+    view.alert_confirm("⚠️", "删除 "+ note_id +" ？", function (state){
         if (state){
-            let note_id = that.parent(".note-box").attr("data-note_id");
             del_note(note_id, userID);
         }else{
             close_note_window();

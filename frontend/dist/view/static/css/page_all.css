@@ -62,6 +62,14 @@ h3, h4, h5, p{
     text-align: center;
 }
 
+.break{
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.break-ellipsis{
+    text-overflow: ellipsis;
+}
+
 /**/
 .radius-btn{
     border-radius: 5px;
