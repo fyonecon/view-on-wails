@@ -106,8 +106,19 @@ function list_note(note_class_id, user_id){
                 $(".note-list").append(dom);
             });
         }else{
-            view.notice_txt("查询无数据", 2000);
-            $(".note-list").html("");
+            // view.notice_txt("查询无数据", 2000);
+            let dom = '<div class="note-box font-white " data-note_id="" data-note_class_id="">' +
+                '<div class="del-note font-text click select-none hide">❎</div>' +
+                '<div class="note-text font-text">' +
+                '    <div class="select-none" style="opacity:0.5;text-align: center;margin-top: 80px;">空列表</div>' +
+                '</div>' +
+                '<div class="update_time-note font-text">' +
+                '    <code class="update_time-note-id font-mini">0</code>' +
+                '    <code class="update_time-note-date font-mini">🕙 </code>' +
+                '    <div class="clear"></div>' +
+                '</div>' +
+                '</div>';
+            $(".note-list").html(dom);
         }
         view.hide_loading();
     });
