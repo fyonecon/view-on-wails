@@ -12,10 +12,10 @@ function check_input_kw(_word){
         url = "./?route=login";
         view.window_open(url, "_self");
     }
-    // else if (word === "kw@help"){
-    //     url = "./?route=help";
-    //     view.window_open(url, "_self");
-    // }
+    else if (word === "kw@help"){
+        url = "./?route=help";
+        view.window_open(url, "_self");
+    }
     else if (word === "kw@404"){
         url = "./?route=404";
         view.window_open(url, "_self");

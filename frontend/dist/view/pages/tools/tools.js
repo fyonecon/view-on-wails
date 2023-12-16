@@ -62,7 +62,7 @@ $(document).on("click", ".a-write_js", function (){
         let insert_class_name = "tab-"+view.md5(js_url);
         // 判断是否能直接切换新的item
         if (selected_confirm === "must" || selected_confirm === "true"){ // 不可以直接切换
-            view.alert_confirm("⚠️ 内容可能丢失", "是否切换到「"+that.text()+"」 ？", function (state){
+            view.alert_confirm("⚠️ 内容可能丢失", "是否切换到 "+that.text()+"  ？", function (state){
                 if (!state){
                     // view.notice_txt("取消了切换", 2000);
                     // 返回选中
@@ -93,7 +93,7 @@ function start_page(){
     $(".back-div").removeClass("hide");
 
     // 默认点击第一个
-    // $(".a-write_js").eq(0).click();
+    $(".a-write_js").eq(0).click();
 
 }
 

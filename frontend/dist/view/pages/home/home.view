@@ -16,7 +16,7 @@
         <div class="rights-div tools-span hide">
             <span class="right-span a-click click" data-href="./?route=tools" data-target="_self" title="Tools">Tools</span>
         </div>
-        <div class="rights-div">
+        <div class="rights-div hide">
             <span class="right-span a-click click" data-href="./?route=help" data-target="_self" title="Help Docs">Help</span>
         </div>
 
