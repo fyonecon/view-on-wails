@@ -28,34 +28,41 @@ const search = [ // 搜索引擎列表，分为移动和PC、前缀和后缀。�
         "engine": "yandex",
     },
     {
+        "name": "搜狗搜索",
+        "engine": "sogou",
+    },
+    {
         "name": "Github",
         "engine": "github",
     },
     {
-        "name": "微信文章",
-        "engine": "weixin",
+        "name": "icon图标",
+        "engine": "icons",
     },
+    {
+        "name": "En-Zh翻译",
+        "engine": "en_zh",
+    },
+    {
+        "name": "Zh-En翻译",
+        "engine": "zh_en",
+    },
+    // {
+    //     "name": "微信文章",
+    //     "engine": "weixin",
+    // },
     {
         "name": "英文电影",
         "engine": "video",
     },
-
     {
         "name": "收费音乐",
         "engine": "music",
     },
-    {
-        "name": "英中翻译",
-        "engine": "en_zh",
-    },
-    {
-        "name": "中英翻译",
-        "engine": "zh_en",
-    },
-    {
-        "name": "东坡下载",
-        "engine": "dpxz_download",
-    },
+    // {
+    //     "name": "东坡下载",
+    //     "engine": "dpxz_download",
+    // },
     {
         "name": "查IP、域名",
         "engine": "ipdomain",
@@ -63,10 +70,6 @@ const search = [ // 搜索引擎列表，分为移动和PC、前缀和后缀。�
     {
         "name": "域名Whois",
         "engine": "whois",
-    },
-    {
-        "name": "icon图",
-        "engine": "icons",
     },
 
 ];

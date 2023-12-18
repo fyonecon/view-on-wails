@@ -31,39 +31,39 @@ function jump_location(engine, word) {
 
         if (engine === "baidu"){
             let url = "https://www.baidu.com/s?ie=utf-8";
-            tab_url = url + "&wd=" + word + del_fake_news + "&cache=" + cache;
+            tab_url = url + "&wd=" + word + del_fake_news;
             name = "Baidu";
         }
         else if (engine === "bing"){
             let url = "https://www.bing.com/?ensearch=1";
-            tab_url = url + "&q=" + word + "&cache=" + cache;
+            tab_url = url + "&q=" + word;
             name = "Bing";
         }
         else if (engine === "google"){
             let url = "https://www.google.com/search?q=";
-            tab_url = url + word + "&cache=" + cache;
+            tab_url = url + word;
             name = "Google";
         }
         else if (engine === "duckduckgo"){
             let url = "https://duckduckgo.com/?ia=web";
-            tab_url = url + "&q=" + word + "&cache=" + cache;
+            tab_url = url + "&q=" + word;
             name = "DuckDuckGo";
         }
         else if (engine === "github"){
             let url = "https://github.com/search?&type=Repositories";
-            tab_url = url + "&q=" + word + "&cache=" + cache;
+            tab_url = url + "&q=" + word;
             name = "Github";
         }
         else if (engine === "yandex"){
             let url = "https://yandex.com/search/?text=";
-            tab_url = url+ word + "&cache=" + cache;
+            tab_url = url+ word;
             name = "Yandex";
         }
         //
         else if (engine === "icons"){
             let url = "https://cn.youicons.com/search/";
             tab_url = url+ word;
-            name = "icon图";
+            name = "icon图标";
         }
 
         //
@@ -89,17 +89,17 @@ function jump_location(engine, word) {
         }
         else if (engine === "weixin"){
             let url = "https://weixin.sogou.com/weixin?type=2&s_from=input&ie=utf8&query=";
-            tab_url = url + word + "&cache=" + cache;
+            tab_url = url + word;
             name = "微信文章搜索";
         }
         else if (engine === "music"){
             let url = "https://www.hifini.com/search-";
-            tab_url = url + word + "-1-1-1.htm?cache=" + cache;
+            tab_url = url + word + "-1-1-1.htm";
             name = "Music搜索";
         }
         else if (engine === "video"){
             let url = "https://www.bing.com/search?ensearch=1&q=tokyvideo+";
-            tab_url = url + word + "&cache=" + cache;
+            tab_url = url + word;
             name = "Bing+Toky搜索";
         }
         else if (engine === "ipdomain"){
@@ -119,12 +119,12 @@ function jump_location(engine, word) {
         }
         else if (engine === "zh_en"){
             let url = "https://fanyi.baidu.com/translate#zh/en/";
-            tab_url = url + word + "&cache=" + cache;
+            tab_url = url + word;
             name = "中英翻译";
         }
         else if (engine === "en_zh"){
             let url = "https://fanyi.baidu.com/translate#en/zh/";
-            tab_url = url + word + "&cache=" + cache;
+            tab_url = url + word;
             name = "英中翻译";
         }
         else {
