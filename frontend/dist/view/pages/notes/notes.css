@@ -38,7 +38,7 @@
     min-height: 75px;
     max-height: 195px;
     border-radius: 5px;
-    border: 1px solid rgba(245,245,245,0.2);
+    border: 1px solid rgba(245,245,245,0);
     padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 10px;
@@ -53,7 +53,7 @@
     position: relative;
 }
 .note-box:hover{
-    border: 1px solid rgba(245,245,245,0.4);
+    border: 1px solid rgba(245,245,245,0.2);
 }
 .del-note{
     top: 5px;

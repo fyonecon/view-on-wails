@@ -38,11 +38,11 @@
     padding: 0 10px;
     overflow: hidden;
     letter-spacing: 1px;
-    border-bottom: 1px solid rgba(245,245,245,0.1);
+    border-bottom: 1px solid rgba(245,245,245,0);
 }
 .tools-left-item-active{
     background-color: rgba(245,245,245,0.2);
-    border-bottom: 1px solid rgba(245,245,245,0.1);
+    border-bottom: 1px solid rgba(245,245,245,0);
 }
 
 .tools-right-content-null{
@@ -62,7 +62,7 @@
     background-color: rgba(205,205, 205, 0.1);
     color: white;
     overflow-x: hidden;
-    border: 1px solid rgba(205,205, 205, 0.3);
+    border: 1px solid rgba(205,205, 205, 0);
     outline: none;
     word-break: break-all;
     word-wrap: break-word;

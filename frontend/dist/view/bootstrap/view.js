@@ -954,7 +954,7 @@ const view = {
         div.style.top = "0px";
         div.style.width = "100%";
         div.style.height = "100%";
-        div.style.backgroundColor = "rgba(255,255,255,0.2)";
+        div.style.backgroundColor = "rgba(205,205,205,0.1)";
         document.getElementById("depend").appendChild(div);
         if (timeout === "long"){
             that.log("显示切不可关闭");
